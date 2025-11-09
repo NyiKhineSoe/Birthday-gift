@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Gift</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="box" onclick="revealMessage()">
+      <div class="message">💌 Click to open your surprise</div>
+
+      <div class="hidden-message">
+        <h2>Happy birthday pr Ya Ping🎂🎉</h2>
+
+        <div class="image-container">
+          <img
+            src="assets/images/birthday_cake.jpeg"
+            alt="Birthday Cake"
+            class="cake"
+          />
+        </div>
+
+        <div class="text-container">
+          <p class="wish-text">
+            7 တန်းနှစ်မှာအမှတ်မထင်ဆုံခွင့်ရလိုက်တဲ့ သူငယ်ချင်းရေ ဘာလိုလိုနဲ့ ၂၄
+            ပြည့်သွားပြီနော်။ Happy birthday pr Ya Ping🎂🎊!
+            ဒီနှစ်မွေးနေ့မှစလို့ပျှော်ပျှော်ရွှင်ရွှင်နဲ့ဖြတ်သန်းနိုင်ပါစေဗျာ။
+            နိုင်ငံခြားကိုအမြန်ဆုံးထွက်နိုင်ပြီး ဒီထက်ပိုကောင်းမွန်တဲ့
+            ကောင်မလေးအနေနဲ့ ဘဝကိုပျံသန်းနိုင်ပါစေ။
+          </p>
+          <button id="playMusicBtn">🎵 Play Birthday Song</button>
+        </div>
+      </div>
+    </div>
+    <audio
+      id="birthdaySong"
+      src="assets/music/birthday_song.mp3"
+      preload="auto"
+      style="display: none"
+    ></audio>
+    <script src="script.js"></script>
+  </body>
+</html>

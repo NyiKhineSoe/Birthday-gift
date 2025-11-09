@@ -1,0 +1,178 @@
+body {
+  background: linear-gradient(135deg, #f8e1e7, #fde2e4);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", "Noto Sans Myanmar", sans-serif;
+}
+
+.box {
+  background-color: #fff;
+  width: 90%; /* increased width */
+  max-width: 480px;
+  min-height: 550px; /* increased height */
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  padding: 30px 25px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.message {
+  font-size: 1.6rem; /* bigger font */
+  color: #ff7b9c;
+  text-align: center;
+  /* opacity: 1;
+  transition: opacity 0.6s ease; */
+  padding: 20px;
+}
+
+.hidden-message {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  animation: fadeIn 1s ease forwards;
+  overflow: hidden;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.text-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.cake {
+  width: 90%;
+  max-width: 320px; /* limit the cake size */
+  height: auto;
+  border-radius: 20px;
+  margin: 15px 0;
+  /* animation: fadeInCake 1.2s ease 0.6s forwards; */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  object-fit: contain; /* keeps the cake centered and cropped nicely */
+  display: block;
+}
+
+.wish-text {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #e75480;
+  text-align: center;
+  line-height: 1.8;
+  width: 100%;
+  max-width: 90%;
+  word-break: break-word;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  border-right: none; /* remove typing cursor line */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 1;
+  transition: opacity 1s ease;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+#playMusicBtn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #ff8fab;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 0;               /* hidden at first */
+  pointer-events: none;     /* disable clicks until visible */
+  transition: opacity 1s ease;
+}
+
+#playMusicBtn.show {
+  opacity: 1;               /* fade in */
+  pointer-events: auto;     /* clickable when visible */
+}
+
+#playMusicBtn:hover {
+  background-color: #ff4d6d;
+  transform: scale(1.05);
+}
+
+@keyframes fadeInCake {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blinkCursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Mobile friendly */
+@media (max-width: 600px) {
+  .box {
+    width: 90%;
+    min-height: 480px;
+  }
+
+  .cake {
+    max-width: 260px;
+  }
+
+  .wish-text {
+    font-size: 0.95rem;
+    max-width: 95%;
+  }
+}
